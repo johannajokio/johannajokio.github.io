@@ -1,0 +1,103 @@
+body {
+	color: #000;
+	background: #eee;
+	font-family: "Fira Sans", sans-serif;
+}
+
+body > header {
+	font-size: 1.2rem;
+}
+
+body > footer {
+	padding: 1.2rem 0;
+	text-align: center;
+	font-size: 0.9rem;
+}
+
+nav {
+	font-size: 1.1rem;
+	vertical-align: baseline;
+	display: inline;
+}
+
+nav a {
+	color: #000;
+	text-decoration: none;
+}
+
+.logo a {
+	color: #000;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 2rem;
+	font-weight: 400;
+	margin: 0 0 1rem 0;
+	line-height: 1;
+}
+
+h2 {
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+
+article {
+	line-height: 1.5;
+}
+
+article > header {
+	margin: 0 0 1rem 0;
+	border-bottom: 1px solid #00000010;
+}
+
+article > footer {
+	margin-bottom: 3rem;
+	padding-left: 1rem;
+	color: #555;
+}
+
+@media (max-width: 52em) {
+	body {
+		width: 90%;
+		margin: 0;
+		padding: 0 5%;
+	}
+	header {
+		margin: 1rem 0;
+	}
+	nav {
+		margin: 0 auto 3rem;
+		line-height: 2;
+	}
+	.logo {
+		margin-bottom: 1rem;
+	}
+	nav a:not(:last-child) {
+		margin-right: 3rem;
+	}
+}
+
+@media (min-width: 52em) {
+	body {
+		width: 50rem;
+		margin: 0 auto;
+		padding: 0;
+	}
+	body > header {
+		margin: 0 0 2rem 0;
+		padding: 1.2rem 0;
+	}
+	nav {
+		margin: 0;
+		text-align: right;
+	}
+	nav a {
+		margin: 0 0 0 3rem;
+		display: inline;
+	}
+	div.logo {
+		display: inline;
+	}
+}
