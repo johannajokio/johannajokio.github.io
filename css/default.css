@@ -1,6 +1,6 @@
 body {
 	color: #000;
-	background: #eee;
+	background: whitesmoke;
 	font-family: "Fira Sans", sans-serif;
 }
 
@@ -73,7 +73,10 @@ h2 {
 article {
 	line-height: 1.5;
 	hyphens: auto;
-	/* text-align: justify; */
+}
+
+article pre {
+	hyphens: none;
 }
 
 article a {
