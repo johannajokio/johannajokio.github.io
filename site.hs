@@ -39,6 +39,14 @@ main = hakyll $ do
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
+    create ["rss.xml"] $ do
+        route idRoute
+        compile $ do
+            let feedCtx = postCtx <> bodyField "description"
+            posts <- fmap (take 10) . recentFirst =<<
+                loadAllSnapshots "posts/*" "content"
+            renderRss myFeedConfiguration feedCtx posts
+
 
 postCtx :: Context String
 postCtx =
@@ -46,6 +54,7 @@ postCtx =
     defaultContext
 
 
+postsCompiler :: [Item String] -> Compiler (Item String)
 postsCompiler posts = do
     let postsCtx =
             listField "posts" postCtx (return posts) <>
@@ -55,4 +64,14 @@ postsCompiler posts = do
         >>= applyAsTemplate postsCtx
         >>= loadAndApplyTemplate "templates/default.html" postsCtx
         >>= relativizeUrls
+
+
+myFeedConfiguration :: FeedConfiguration
+myFeedConfiguration = FeedConfiguration
+    { feedTitle       = "pera's blog"
+    , feedDescription = "Just my personal, almost abandoned, weblog..."
+    , feedAuthorName  = "Brian Gomes Bascoy"
+    , feedAuthorEmail = ""
+    , feedRoot        = "http://blog.peramid.es/rss.xml"
+    }
 
