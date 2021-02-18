@@ -4,9 +4,19 @@
 	</header>
 	$body$
 	<footer>
-		📆 $date$
-		$if(author)$
-		by $author$
-		$endif$
+		<ol>
+			<li>
+				📆 $date$
+				$if(author)$
+				by $author$
+				$endif$
+			</li>
+			$if(tags)$
+			<li>
+				🏷️ $tags$
+			</li>
+			$endif$
+		</ol>
 	</footer>
 </article>
+

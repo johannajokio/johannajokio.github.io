@@ -95,8 +95,17 @@ article > header {
 
 article > footer {
 	margin-bottom: 3rem;
-	padding-left: 1rem;
 	color: #555;
+}
+
+article > footer ol {
+	padding: 0;
+}
+
+article > footer li {
+	display: inline;
+	margin-left: 2rem;
+	list-style-type: none;
 }
 
 @media (max-width: 52em) {
