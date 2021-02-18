@@ -78,7 +78,6 @@ article {
 article pre {
 	hyphens: none;
 	background-color: white;
-	padding: 0 0.2rem;
 }
 
 article a {
@@ -102,9 +101,8 @@ article > footer {
 
 @media (max-width: 52em) {
 	body {
-		width: 90%;
 		margin: 0;
-		padding: 0 5%;
+		padding: 0 1rem;
 	}
 	header {
 		margin: 1rem 0;
@@ -118,6 +116,13 @@ article > footer {
 	}
 	nav a:not(:last-child) {
 		margin-right: 3rem;
+	}
+	article div.sourceCode {
+		margin: 0 -1rem;
+	}
+	article pre {
+		padding: 0.5rem 1rem;
+		margin: 0 -1rem;
 	}
 }
 
@@ -142,4 +147,9 @@ article > footer {
 	div.logo {
 		display: inline;
 	}
+	article pre {
+		padding: 0.5rem;
+		border-radius: 0.5rem;
+	}
 }
+
