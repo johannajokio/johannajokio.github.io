@@ -103,7 +103,6 @@ article > footer ol {
 }
 
 article > footer li {
-	display: inline;
 	margin-left: 2rem;
 	list-style-type: none;
 }
@@ -159,6 +158,9 @@ article > footer li {
 	article pre {
 		padding: 0.5rem;
 		border-radius: 0.5rem;
+	}
+	article > footer li {
+		display: inline;
 	}
 }
 
