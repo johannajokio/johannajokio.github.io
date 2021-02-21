@@ -1,5 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 import Hakyll
+import Text.Pandoc
 
 main :: IO ()
 main = hakyll $ do
@@ -13,7 +14,7 @@ main = hakyll $ do
 
     match "posts/*" $ do
         route $ setExtension "html"
-        compile $ pandocCompiler
+        compile $ pandocCompilerWith defaultHakyllReaderOptions myHakyllWriterOptions
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
             >>= saveSnapshot "content"
             >>= loadAndApplyTemplate "templates/default.html" postCtx
@@ -74,4 +75,9 @@ myFeedConfiguration = FeedConfiguration
     , feedAuthorEmail = ""
     , feedRoot        = "http://blog.peramid.es/rss.xml"
     }
+
+
+myHakyllWriterOptions :: WriterOptions
+myHakyllWriterOptions = defaultHakyllWriterOptions
+    { writerHTMLMathMethod = MathML }
 
