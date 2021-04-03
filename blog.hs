@@ -35,7 +35,7 @@ main = hakyll $ do
             >>= postsCompiler
 
     match "contact.html" $ do
-        route $ setExtension "html"
+        route idRoute
         compile $ getResourceBody
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
