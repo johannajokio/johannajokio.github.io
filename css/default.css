@@ -1,7 +1,7 @@
 body {
 	color: black;
-	background: whitesmoke;
-	font-family: "Fira Sans", sans-serif;
+	background: lavender;
+	font-family: sans-serif;
 }
 
 body > header {
@@ -14,7 +14,7 @@ body > footer {
 	font-size: 0.9rem;
 }
 
-a:hover {
+a:hover, .logo > a:hover {
 	color: blue;
 	text-decoration: underline;
 }

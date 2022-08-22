@@ -34,7 +34,7 @@ main = hakyll $ do
             >>= recentFirst
             >>= postsCompiler
 
-    match "contact.html" $ do
+    match "about.html" $ do
         route idRoute
         compile $ getResourceBody
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
@@ -69,11 +69,11 @@ postsCompiler posts = do
 
 myFeedConfiguration :: FeedConfiguration
 myFeedConfiguration = FeedConfiguration
-    { feedTitle       = "pera's blog"
-    , feedDescription = "Just my personal, almost abandoned, weblog..."
-    , feedAuthorName  = "Brian Gomes Bascoy"
+    { feedTitle       = "a new blog"
+    , feedDescription = "add description here"
+    , feedAuthorName  = ""
     , feedAuthorEmail = ""
-    , feedRoot        = "http://blog.peramid.es/rss.xml"
+    , feedRoot        = "https://example.com/rss.xml"
     }
 
 
