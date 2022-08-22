@@ -3,7 +3,7 @@ import Hakyll
 import Text.Pandoc
 
 main :: IO ()
-main = hakyll $ do
+main = hakyllWith configuration $ do
     match "images/*" $ do
         route   idRoute
         compile copyFileCompiler
@@ -48,6 +48,10 @@ main = hakyll $ do
                 loadAllSnapshots "posts/*" "content"
             renderRss myFeedConfiguration feedCtx posts
 
+
+configuration :: Configuration
+configuration = defaultConfiguration
+    { deployCommand = "./deploy.sh" }
 
 postCtx :: Context String
 postCtx =
