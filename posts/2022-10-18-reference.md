@@ -1,8 +1,6 @@
 ---
-title: "Intro"
+title: Hello world and its polygons
 ---
-
-## Hello
 
 Welcome to my mapping blog! I'm Johanna, a data analyst who started working in R not so long ago. In this blog, I will use open access data to create maps of topics I find interesting and potentially highlight something that could be used for the public good.
 
@@ -10,4 +8,4 @@ I  am focusing on maps at this point of my data science learning, and I think I 
 
 I've previously done a PhD in Urban Studies where I mapped housing tenure composition in different areas of Scotland and used it with other neighbourhood statistics.
 
-The website is made by pera, using Haskell, which was developed in Glasgow.
+The website is made by [pera](https://gitlab.com/trobador), using Haskell, which was developed in Glasgow.
