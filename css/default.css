@@ -1,6 +1,6 @@
 body {
 	color: black;
-	background: rgb(243, 222, 249);
+	background: rgb(244, 225, 249);
 	font-family: sans-serif;
 }
 
@@ -15,7 +15,7 @@ body > footer {
 }
 
 a:hover, .logo > a:hover {
-	color: blue;
+	color: rgb(141, 1, 124);
 	text-decoration: underline;
 }
 
@@ -100,6 +100,7 @@ article > footer {
 
 article > footer ol {
 	padding: 0;
+	text-align: right;
 }
 
 article > footer li {
