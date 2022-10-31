@@ -3,9 +3,9 @@ title: Smoking with R's tmap
 ---
 In my first post, I'll explain how to process public health data to generate a map on R. 
 
-I've taken a csv file with the number of current smokers in Scotland's health boards from [here](https://statistics.gov.scot/resource?uri=http%3A%2F%2Fstatistics.gov.scot%2Fdata%2Fscottish-health-survey-local-area-level-data).
+I've taken a csv file with the percentage of current smokers in Scotland's health boards from [here](https://statistics.gov.scot/resource?uri=http%3A%2F%2Fstatistics.gov.scot%2Fdata%2Fscottish-health-survey-local-area-level-data).
 
-You get a file with just four columns, one with the health board code and the rate of smoking for males and females and the total rate.
+You get a file with just four columns, one with the health board code, the rate of smoking for males and females, and the total rate.
 
 Basically, I tried a few packages and got stuck with various dependency errors. I used *sf* (simple features) and *sp* to read in and join the files. For the map, I ended up using `tmap` which is flexible and the syntax is nice and concise.
 
@@ -23,7 +23,7 @@ Finally, the code to create the map starts with `tm_shape` and the merged file. 
 
 I tested a few colour palettes when I was using other packages (like *RColorBrewer*), and when including the palette you have to define whether the data is continuous or discrete. I was confused at many points with this, as the smoking data is... not continuous but not discrete? The csv just includes a number (the percentage) for each health board (it's discrete). But *tmap* has grouped the data automatically, showing the range of values and the colour they correspond to in the legend bar. This also helps to see which health boards are similar in their rates.
 
-With other packages, I also had issues trying to centre the health board labels and not have them overlap, but *tmap* has a handy argument, `remove_overlap` which does just that. And I ended up using the *tmap* style *cobalt*.
+With other packages, I also had issues trying to centre the health board labels and not having them overlap, but *tmap* has a handy argument, `remove_overlap` which does just that. And I ended up using the *tmap* style *cobalt*.
 
 ```r
 tm_shape(shp_hb) +
