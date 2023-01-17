@@ -1,5 +1,17 @@
 ```r
- 
+ library(openxlsx)
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(sf)
+library(st)
+library(plotly)
+library(leaflet)
+library(dplyr)
+library(sf)
+library(RColorBrewer)
+library(tidyverse)
+
 #Read in the basemap
 
 geolevel <- sf::read_sf("world_geolev1_2021.shp")
@@ -94,3 +106,4 @@ leaflet::leaflet() %>%
   addLegend("bottomright", pal = pal, values = df$densitybins,
             title = "Population/km2",
             opacity = 1)
+```
