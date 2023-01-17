@@ -15,4 +15,4 @@ Data: *Minnesota Population Center. Integrated Public Use Microdata Series, Inte
 
 ![Population density in South America made on *ggplot*](/images/popdensity_sa.png)
 
-![Population density in South America made on *leaflet*](/images/leaflet_popdensity_southamerica.png)
+![Population density in South America made on *leaflet*](/images/leaflet_popdensity_southamerica_90(1).png)
