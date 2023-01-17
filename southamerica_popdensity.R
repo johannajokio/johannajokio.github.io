@@ -1,5 +1,4 @@
-```r
- library(openxlsx)
+library(openxlsx)
 library(tidyverse)
 library(dplyr)
 library(ggplot2)
@@ -106,4 +105,3 @@ leaflet::leaflet() %>%
   addLegend("bottomright", pal = pal, values = df$densitybins,
             title = "Population/km2",
             opacity = 1)
-```
