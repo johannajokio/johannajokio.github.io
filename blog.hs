@@ -73,11 +73,11 @@ postsCompiler posts = do
 
 myFeedConfiguration :: FeedConfiguration
 myFeedConfiguration = FeedConfiguration
-    { feedTitle       = "a new blog"
-    , feedDescription = "add description here"
+    { feedTitle       = "mapisto"
+    , feedDescription = "blog"
     , feedAuthorName  = "Johanna Jokio"
     , feedAuthorEmail = ""
-    , feedRoot        = "https://example.com/rss.xml"
+    , feedRoot        = "https://johannajokio.github.io/rss.xml"
     }
 
 
