@@ -75,7 +75,7 @@ myFeedConfiguration :: FeedConfiguration
 myFeedConfiguration = FeedConfiguration
     { feedTitle       = "a new blog"
     , feedDescription = "add description here"
-    , feedAuthorName  = ""
+    , feedAuthorName  = "Johanna Jokio"
     , feedAuthorEmail = ""
     , feedRoot        = "https://example.com/rss.xml"
     }
