@@ -13,7 +13,7 @@ Data and more information about the indicator: [OECD (2023), Air pollution effec
 
 For this one, I used [*mapsf*](https://riatelab.github.io/mapsf/), the successor of the *cartogaphy* package. I really liked using this one, as the main bit of the code ie. `map_choro()` incroporates  options (palette, number of breaks...) that you would commonly use anyway but maybe have to add in or build up before plotting, which is helpful. I'll add the code below, as I have some comments on it:
 
-```{r}
+```r
 #Load packages
 library(tidyverse) 
 library(dplyr)
