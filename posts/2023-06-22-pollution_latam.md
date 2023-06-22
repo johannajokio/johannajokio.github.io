@@ -7,7 +7,7 @@ The OECD has a lot of data on health as well as environment indicators at a glob
 
 I am thinking of making an R Shiny app for a group of indicators for Latin America, and it could be around health and/or the environment. Any ideas, let me know.
 
-![Pollution mortality in Latin America made with *mapsf*](/images/pollutionmortality_latam.xcf)
+![Pollution mortality in Latin America made with *mapsf*](/images/pollutionmortality_latam.png)
 
 Data and more information about the indicator: [OECD (2023), Air pollution effects indicator. doi: 10.1787/573e3faf-en (Accessed on 22 June 2023).](https://data.oecd.org/air/air-pollution-effects.htm)
 
