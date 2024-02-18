@@ -3,51 +3,13 @@
 
 # ## Eurostat
 
-# In[1]:
-
-
 import pandas as pd
 import geopandas as gpd
-import folium
 import matplotlib.pyplot as plt
 
+# load Natural earth shapefile
 
-# In[2]:
-
-
-#from openpyxl import load_workbook
-
-
-# In[3]:
-
-
-import os
-os.getcwd()
-
-
-# In[33]:
-
-
-land10 = gpd.read_file("/home/jojo/Documents/workshop-ukraine-geopython-main/ne_10m_admin_0_countries.shp")
-
-
-# In[34]:
-
-
-land10.columns
-
-
-# In[25]:
-
-
-land10.head()
-
-
-# In[26]:
-
-
-land10.plot()
-
+land10 = gpd.read_file("ne_110m_admin_0_countries.shp")
 
 # In[16]:
 
@@ -169,12 +131,8 @@ ax.set_ylim(ymin-pad, ymax+ pad)
 fig.text(0.4, 0.9, "Source: Eurostat 2022",
          horizontalalignment="center", fontsize=8)
 
-# Save plot to file (high resolution, PDF)
-plt.savefig("bar-plot-hi-res.pdf", dpi=600)
-
-
-# In[ ]:
-
+# Save plot to file 
+plt.savefig("eurostat.png", dpi=600)
 
 
 
