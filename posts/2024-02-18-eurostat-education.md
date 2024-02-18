@@ -8,7 +8,6 @@ Using [Eurostat](https://ec.europa.eu/eurostat/web/education-and-training/databa
 First, I've used a Natural Earth shapefile to get the base map of the world. Then, after I've read in the Eurostat file and made sure the country colunms in both files are called 'Country', I merge them like so:
 
 ```python
-
 df  = wb.merge(land10, on ='Country', how ='left')
 gdf = gpd.GeoDataFrame(df)
 
@@ -50,5 +49,7 @@ plt.savefig("eurostat.png", dpi=600)
 ```
 
 ![Tertiary education in Europe map](/images/eurostat.png)
+
+I would like to know how to make the map flat and not so squished (if you know what I mean). I'm going to explore other base maps in the future.
 
 The script is also available in my [repo](https://github.com/johannajokio/johannajokio.github.io/blob/master/scripts/Eurostat.py).
