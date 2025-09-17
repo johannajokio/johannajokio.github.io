@@ -14,10 +14,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v5
-    - uses: actions/setup-haskell@v1.1
-      with:
-        ghc-version: '8.10.3'
-        cabal-version: '3.2'
+    - uses: haskell/ghcup-setup@v1
+    - run: |
+        ghcup install ghc --set latest
 
     - name: Cache
       uses: actions/cache@v4
@@ -59,4 +58,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
 
