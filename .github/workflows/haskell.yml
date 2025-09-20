@@ -16,7 +16,7 @@ jobs:
     - uses: actions/checkout@v5
     - uses: haskell/ghcup-setup@v1
     - run: |
-        ghcup install ghc --set latest
+        ghcup install ghc --set 9.4.8
 
     - name: Cache
       uses: actions/cache@v4
